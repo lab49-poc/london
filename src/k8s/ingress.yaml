@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: london
+  annotations:
+    konghq.com/strip-path: "true"
+    kubernetes.io/ingress.class: kong
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /london
+            pathType: Prefix
+            backend:
+              serviceName: london
+              servicePort: 8080

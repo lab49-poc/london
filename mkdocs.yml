@@ -1,0 +1,11 @@
+site_name: "london"
+site_description: "london demo"
+
+repo_url: https://github.com/lab49-poc/london
+
+
+nav:
+  - Introduction: index.md
+
+plugins:
+  - techdocs-core

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: london
+  name: london
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: london
+  template:
+    metadata:
+      labels:
+        app: london
+    spec:
+      containers:
+      - image: --image--
+        name: london
+        ports:
+          - containerPort: 8080
